@@ -27,18 +27,18 @@
             </div>
             <div class="row" align="center">
                 <div class="col">
-                    <button type="button" class="btn btn-outline-secondary">Ver en vivo</button>
+                    <a class="btn btn-outline-secondary _a" href="envivo.php" role="button">Ver en vivo</a>
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-outline-secondary">¿Necesitas ayuda?</button>
+                    <a class="btn btn-outline-secondary _a" href="#" role="button">¿Necesitas ayuda?</a>
                 </div>
             </div>
             <div class="row" align="center">
                 <div class="col">
-                    <button type="button" class="btn btn-outline-secondary">Ver datos pasados</button>
+                    <a class="btn btn-outline-secondary _a" href="#" role="button">Ver datos pasados</a>
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-outline-secondary">Reportar problema</button>
+                    <a class="btn btn-outline-secondary _a" href="https://ayuda.ucsc.cl/" role="button">Reportar problema</a>
                 </div>
             </div>
         </div>
