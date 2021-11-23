@@ -16,9 +16,11 @@
                     <input name="user" type="text">
                     <label>Contaseña</label>
                     <input name="pass" type="password">
-                    <a href="#">
-                        <label>Registrarse</label>
-                    </a>
+                    <div align="center">
+                        <a href="#">
+                            <label>Registrarse</label>
+                        </a>
+                    </div>
                     <input type="button" name="btn-ingresar" value="Acceder">
                 </div>
             </div>
