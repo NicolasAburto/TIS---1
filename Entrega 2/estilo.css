@@ -6,10 +6,14 @@
 }
 
 .margen{
-    margin: 10px 10px 10px 10px;
+    margin: 25px 25px 25px 25px;
 }
 
 h2{
     text-align: center;
     margin-bottom: 20px;
+}
+
+.reg{
+    margin: 10px 0px 10px 0px;
 }
