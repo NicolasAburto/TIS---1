@@ -20,7 +20,7 @@
                     <input name="user" type="text">
                     <label>Contaseña</label>
                     <input name="pass" type="password">
-                    <div align="center">
+                    <div align="center" class="reg">
                         <a href="#">
                             <label>Registrarse</label>
                         </a>
