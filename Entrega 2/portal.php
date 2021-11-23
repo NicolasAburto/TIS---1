@@ -20,7 +20,7 @@
                 <a class="nav-link" href="#">Datos anteriores</a>
             </li>
         </ul>
-        <div class="container">
+        <div class="container contenedor">
             <div class="col">
                 <h1>Control de Aforos en edificios</h1>
                 <h5>Medidas de prevencion COVID-19 de la UCSC</h5>
@@ -42,6 +42,12 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <p>Unidad de Infraestructura DO - UCSC.</p>
+            <a href="portal.ucsc.cl">
+                <label>Ir a Portal Institucional</label>
+            </a>
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
