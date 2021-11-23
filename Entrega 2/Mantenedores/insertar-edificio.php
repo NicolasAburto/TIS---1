@@ -13,11 +13,8 @@
       <?php
           $id_edificio = $_POST['id_edificio'];
           $nombre_edificio = $_POST['nombre_edificio'];
-          $cantidad_maxima_edificio = $_POST['cantidad_maxima_edificio'];
-          echo $id_edificio;
-          echo $nombre_edificio;
-          echo $cantidad_maxima_edificio;
-          $insert = "INSERT INTO edificio (id_edificio, nombre_edificio, cantidad_maxima_edificio) VALUES ('$id_edificio', '$nombre_edificio', '$cantidad_maxima_edificio')";
+          $capacidad_maxima_edificio = $_POST['capacidad_maxima_edificio'];
+          $insert = "INSERT INTO edificio (id_edificio, nombre_edificio, capacidad_maxima_edificio) VALUES ('$id_edificio', '$nombre_edificio', '$capacidad_maxima_edificio')";
           $resultado = mysqli_query($conexion,$insert);
           if($resultado)
           {

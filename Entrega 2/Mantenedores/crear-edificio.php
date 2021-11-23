@@ -16,8 +16,8 @@
           <input type="text" name="id_edificio">
           <label for="nombre_edificio">Nombre Edificio</label>
           <input type="text" name="nombre_edificio">
-          <label for="cantidad_maxima_edificio">Aforo Maximo</label>
-          <input type="text" name="cantidad_maxima_edificio">
+          <label for="capacidad_maxima_edificio">Aforo Maximo</label>
+          <input type="text" name="capacidad_maxima_edificio">
           <button type="submit">Guardar</button>
         </form>
     </div>
