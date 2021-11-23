@@ -1,3 +1,7 @@
+<?php
+    require("conexion.php");
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
