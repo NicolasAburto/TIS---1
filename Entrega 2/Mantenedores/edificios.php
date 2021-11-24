@@ -1,6 +1,6 @@
 
 <?php
-  require("../conexion.php");
+  require("conexion.php");
  ?>
 <html>
   <head>
@@ -17,6 +17,7 @@
           <th scope="col">Capacidad Maxima</th>
           <th scope="col">Operaciones</th>
           <th><a class="d-inline btn btn-dark" href="crear-edificio.php" role="button">Crear</a></th>
+          <th><a class="d-inline btn btn-dark" href="index_manten.php" role="button">Atrás</a></th>
         </tr>
       </thead>
       <tbody>
