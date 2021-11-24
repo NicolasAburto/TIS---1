@@ -21,7 +21,7 @@
                     <label>Contaseña</label>
                     <input name="pass" type="password">
                     <div align="center" class="reg">
-                        <a href="#">
+                        <a href="index_personal.php">
                             <label>Registrarse</label>
                         </a>
                     </div>
