@@ -1,5 +1,5 @@
 <?php
-    require("conexion.php");
+    require("../conexion.php");
 ?>
 
 <!DOCTYPE html>
@@ -8,16 +8,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal</title>
+    <title>Personal BD</title>
+    <link rel="stylesheet" href="estilos_personal.css">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 
-
     <div class="container">
-        <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
+                Aforo UCSC - Registro
+            </a>
+            </div>
+        </nav>
+
+
+        <div class="row fondo">
             <div class="col-lg-6 pt-5">
                 <h3>Formulario de registro de personal</h3>
             </div>
@@ -53,11 +63,9 @@
                     <div class="d-grid gap-2">
                         <button type="submit" value="Guardar" class="btn btn-primary" type="button">Guardar</button>
                         <a align="center" href="index_manten.php"><button class="btn btn-primary" type="button">Atrás</button></a>
-                        
                     </div>
 
                 </form>
-
             </div>
 
             <div class="col-lg-6">
@@ -96,7 +104,7 @@
     </div>
 
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
