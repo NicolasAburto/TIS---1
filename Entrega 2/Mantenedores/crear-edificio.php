@@ -12,13 +12,11 @@
     <div>
         <h1>Crear Edificio</h1>
         <form class="" action="insertar-edificio.php" method="post">
-          <label for="id_edificio">ID Edificio</label>
-          <input type="text" name="id_edificio">
           <label for="nombre_edificio">Nombre Edificio</label>
           <input type="text" name="nombre_edificio">
           <label for="capacidad_maxima_edificio">Aforo Maximo</label>
           <input type="text" name="capacidad_maxima_edificio">
-          <button type="submit">Guardar</button>
+          <button class='btn btn-dark'type="submit">Guardar</button>
         </form>
     </div>
   </body>

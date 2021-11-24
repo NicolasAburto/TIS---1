@@ -18,7 +18,7 @@
           $resultado = mysqli_query($conexion,$insert);
           if($resultado)
           {
-              echo "<h3>Registrado correctamente!</h3>";
+              header("Location: edificios.php");
           }
           else {
             echo "<h3>REGISTRO FALLIDO</h3>";
