@@ -1,5 +1,5 @@
 <?php
-    require("conexion.php");
+    require("../conexion.php");
 
     $run_personal_recibido=$_GET["seleccionado"];
     $sql = "DELETE FROM personal WHERE run=$run_personal_recibido";
