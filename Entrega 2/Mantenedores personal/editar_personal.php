@@ -27,7 +27,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index_personal.php">
                 <img src="logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
                 Aforo UCSC - Personal
             </a>
