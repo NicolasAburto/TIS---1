@@ -1,5 +1,5 @@
 <?php
-    require("conexion.php");
+    require("../conexion.php");
     $run_personal_recibido = $_POST["input_run_oculto"];
     $nombre_personal_recibido = $_POST["input_nombre_personal"];
     $cargo_personal_recibido = $_POST["input_cargo_personal"];
