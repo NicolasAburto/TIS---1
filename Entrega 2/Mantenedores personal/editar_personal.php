@@ -1,5 +1,5 @@
 <?php
-    require("conexion.php");
+    require("../conexion.php");
     $run_personal_recibido=$_GET["seleccionado"];
     $consulta = "SELECT * FROM personal WHERE run=$run_personal_recibido";
     $resultado = mysqli_query($conexion,$consulta);
