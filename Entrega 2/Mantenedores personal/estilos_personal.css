@@ -1,0 +1,11 @@
+*{
+    margin: 0%;
+}
+
+.fondo{
+    background-image: url('fondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
