@@ -15,8 +15,6 @@
             <div class="col-lg-12 mt-5">
                 <h1 align="center">MANTENEDORES <a href="index.php"><button class="btn btn-primary ms-5" type="button">Volver</button></a></h1>
 
-
-
             </div>
             <div class="col-lg-6 mt-5">
                 <h1>Personal</h1>
