@@ -1,0 +1,28 @@
+.contenedor-login{
+    width: 300px;
+    height: 100%;
+    border: 1px solid;
+    margin-top: 50px;
+}
+
+.margen{
+    margin: 25px 25px 25px 25px;
+}
+
+h1, h2, h3, h4, h5, p, a, footer{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reg{
+    margin: 10px 0px 10px 0px;
+}
+
+._a{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.contenedor{
+    margin: 50px 50px 50px 50px;
+}
