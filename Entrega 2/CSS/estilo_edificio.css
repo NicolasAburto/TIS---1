@@ -1,0 +1,55 @@
+*{
+    margin: 0%;
+}
+
+.fondo{
+    background-image: url('edificios.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2%;
+    min-height: 877px;
+}
+
+.atras{
+    width: 100%;;
+}
+
+.texto_registro{
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.formulario_edificio{
+    background-color: rgba(255, 255, 255, 0.74);
+    padding: 10%;
+}
+
+.listado_edificio{
+    background-color: rgba(255, 255, 255, 0.74);
+    padding: 10%;
+}
+
+.texto_listado th{
+    font-size: large;
+    font-weight: 700;
+}
+
+.texto_listado td{
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(25, 0, 253)
+}
+
+.edicion_edificio{
+    background-color: rgba(255, 255, 255, 0.74);
+    padding: 6%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.boton button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 25, 25);
+}
