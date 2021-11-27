@@ -1,3 +1,7 @@
+<?php
+  require("conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +20,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="https://www.ucsc.cl/">
                 <img src="CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
-                Aforo UCSC - Personal
+                Aforo UCSC - Mantenedor
             </a>
             <a align="center" href="index.php" class="cerrarsesion boton">
                 <button value="cerrarsesion" class="btn btn-primary" type="button">Cerrar sesión</button>
@@ -33,14 +37,14 @@
             <div class="col-lg-6 mt-5" align="center">
                 <div class="mantenedor">
                     <h1>Personal</h1>
-                    <a href="index_personal.php" class="boton"><button class="btn btn-primary mt-3" type="button">Entrar</button></a>
+                    <a href="Mantenedor_personal\index_personal.php" class="boton"><button class="btn btn-primary mt-3" type="button">Entrar</button></a>
                 </div>
             </div>
 
             <div class="col-lg-6 mt-5" align="center">
                 <div class="mantenedor">
                     <h1>Edificio</h1>
-                    <a href="edificios.php" class="boton"><button class="btn btn-primary mt-3" type="button">Entrar</button></a>
+                    <a href="Mantenedor_edificio/edificios.php" class="boton"><button class="btn btn-primary mt-3" type="button">Entrar</button></a>
                 </div>
             </div>
         </div>
