@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal BD</title>
-    <link rel="stylesheet" href="../CSS/estilo_personal.css">
+    <link rel="stylesheet" href="../CSS/estilo_mantenedor.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -29,7 +29,7 @@
     </nav>
 
 
-    <div class="container-fluid fondo">
+    <div class="container-fluid fondopersonal">
 
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -96,7 +96,6 @@
                                         <a class='boton' href='funcion_eliminar_personal.php?seleccionado=".$run_personal_recibido."'>
                                             <button value='eliminar' class='btn btn-primary' type='button'>Eliminar</button>
                                         </a>  
-
                                         <a class='boton' href='editar_personal.php?seleccionado=".$run_personal_recibido."'>
                                             <button value='Editar' class='btn btn-primary' type='button'>Editar</button>
                                         </a>
