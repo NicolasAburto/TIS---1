@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal editar</title>
 
-    <link rel="stylesheet" href="../CSS/estilo_personal.css">
+    <link rel="stylesheet" href="../CSS/estilo_mantenedor.css">
 
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <div class="container-fluid fondo">
+    <div class="container-fluid fondopersonal">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <form action="funcion_editar_personal.php" method="POST" class="edicion_personal">
