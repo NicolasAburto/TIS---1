@@ -26,7 +26,6 @@
                 <li class="nav-item">
                     <a class="nav-link navbarlinks" href="#">Datos anteriores</a>
                 </li>
-
                 <a href="index.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
@@ -40,7 +39,6 @@
         <div class="row capacontainer">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="container contenedor">
-
                     <div class="col">
                         <img src="CSS/logoucsc.png" alt="" class="logotitulo">
                         <h1 class="titulo">Control de Aforos en edificios</h1>
@@ -62,7 +60,6 @@
                             <a class="btn btn-outline-secondary _a" href="https://ayuda.ucsc.cl/" role="button">Reportar problema</a>
                         </div>
                     </div>
-                    
                 </div>
             </div>
 
