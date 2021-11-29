@@ -3,7 +3,7 @@
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +11,11 @@
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Aforo UCSC - Acceso</title>
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
 </head>
 <body>
 
@@ -39,26 +44,21 @@
             </ul>
         </div>
     </nav>
-
-    <div class="fondoacceso">
-        <div class="container contenedor-login">
-            <div class="col">
-                <div class="row margen">
-                    <h2>Acceso UCSC</h2>
-                    <label>Usuario</label>
-                    <input name="user" type="text">
-                    <label>Contaseña</label>
-                    <input name="pass" type="password">
-                    <div align="center" class="reg">
-                        <a href="#">
-                            <label>Registrarse</label>
-                        </a>
+    <form action="acceder.php" method="POST">
+        <div class="fondoacceso">
+            <div class="container contenedor-login">
+                <div class="col">
+                    <div class="row margen">
+                        <h2>Acceso UCSC</h2>
+                            <label>Usuario</label>
+                            <input name="input_user" type="text">
+                            <button type="submit" value="acceder" class="btn btn-primary mt-4" type="button">Acceder</button>
+                        <!-- <a align="center" href="index_manten.php"><button  class="btn btn-primary" type="button">Acceder</button></a> -->
                     </div>
-                    <a align="center" href="index_manten.php"><button class="btn btn-primary" type="button">Acceder</button></a>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
