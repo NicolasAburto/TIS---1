@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portal - Aforo UCSC</title>
+    <title>Aforo UCSC</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
@@ -26,6 +26,7 @@
                 <li class="nav-item">
                     <a class="nav-link navbarlinks" href="#">Datos anteriores</a>
                 </li>
+
                 <a href="index.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
@@ -39,6 +40,7 @@
         <div class="row capacontainer">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="container contenedor">
+
                     <div class="col">
                         <img src="CSS/logoucsc.png" alt="" class="logotitulo">
                         <h1 class="titulo">Control de Aforos en edificios</h1>
@@ -60,6 +62,7 @@
                             <a class="btn btn-outline-secondary _a" href="https://ayuda.ucsc.cl/" role="button">Reportar problema</a>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 
