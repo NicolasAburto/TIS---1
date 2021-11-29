@@ -81,3 +81,17 @@ footer{
     font-size: 130%;
     color: blue;
 }
+
+.copy{
+    position: relative;
+    top: 3px;
+}
+
+.iconousuario{
+    position: relative;
+    top: 7px;
+}
+
+.navbarlinks{
+    color: black;
+}
