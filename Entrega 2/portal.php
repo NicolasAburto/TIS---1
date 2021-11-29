@@ -18,14 +18,21 @@
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="portal.php">Inicio</a>
+                    <a class="nav-link active navbarlinks" aria-current="page" href="portal.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="envivo.php">En Vivo</a>
+                    <a class="nav-link navbarlinks" href="envivo.php">En Vivo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Datos anteriores</a>
+                    <a class="nav-link navbarlinks" href="#">Datos anteriores</a>
                 </li>
+
+                <a href="index.php">
+                    <span class="material-icons iconousuario text-black">
+                        account_circle
+                    </span>
+                </a>
+                
             </ul>
         </div>
     </nav>
