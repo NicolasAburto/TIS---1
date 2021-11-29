@@ -36,12 +36,13 @@
         </div>
     </nav>
     
-    <div class="container-fluid fondoportal capacontainer">
+    <div class="container-fluid fondoportal">
         <div class="row capacontainer">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="container contenedor">
-                
+
                     <div class="col">
+                        <img src="CSS/logoucsc.png" alt="" class="logotitulo">
                         <h1 class="titulo">Control de Aforos en edificios</h1>
                         <h5 class="subtitulo">Medidas de prevención COVID-19 de la UCSC</h5>
                     </div>
@@ -80,6 +81,6 @@
             </div>
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
