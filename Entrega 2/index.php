@@ -29,6 +29,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Datos anteriores</a>
                 </li>
+                <a href="index.php">
+                    <span class="material-icons iconousuario text-black">
+                        account_circle
+                    </span>
+                </a>
             </ul>
         </div>
     </nav>
