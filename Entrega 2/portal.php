@@ -32,7 +32,6 @@
                         account_circle
                     </span>
                 </a>
-                
             </ul>
         </div>
     </nav>
