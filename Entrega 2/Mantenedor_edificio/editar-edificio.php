@@ -43,12 +43,12 @@
           <input type="hidden" name="id_edificio_oculto" value="<?php echo "$id_edificio_recibido" ?>">                    
           <div class="mb-3">
             <label class="form-label texto_registro">Nombre Edificio</label>
-            <input type="text" class="form-control" name="nombre_edificio" value="<?php echo "$nombre_edificio_recibido" ?>">
+            <input type="text" class="form-control" name="nombre_edificio" value="<?php echo "$nombre_edificio_recibido" ?>" required>
           </div>
 
           <div class="mb-3">
             <label class="form-label texto_registro">Aforo máximo</label>
-            <input type="text" class="form-control" name="capacidad_maxima_edificio" value="<?php echo "$capacidad_maxima_edificio_recibido" ?>">
+            <input type="text" class="form-control" name="capacidad_maxima_edificio" value="<?php echo "$capacidad_maxima_edificio_recibido" ?>" required>
           </div>
 
           <div class="d-grid gap-2 pt-5 boton">
