@@ -22,7 +22,7 @@
                 <img src="CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
                 Aforo UCSC - Mantenedor
             </a>
-            <a align="center" href="index.php" class="cerrarsesion boton">
+            <a align="center" href="acceso.php" class="cerrarsesion boton">
                 <button value="cerrarsesion" class="btn btn-primary" type="button">Cerrar sesión</button>
             </a>
 
