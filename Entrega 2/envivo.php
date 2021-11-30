@@ -7,11 +7,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Aforo UCSC - En vivo</title>
-
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,7 +18,7 @@
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active navbarlinks" aria-current="page" href="portal.php">Inicio</a>
+                    <a class="nav-link active navbarlinks" aria-current="page" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link navbarlinks" href="envivo.php">En Vivo</a>
