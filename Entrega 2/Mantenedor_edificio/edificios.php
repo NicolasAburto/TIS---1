@@ -33,11 +33,11 @@
           <h3 align="center" class="mb-5">Formulario de registro de edificio</h3>
           <div class="mb-3">
             <label class="form-label texto_registro">Nombre Edificio</label>
-            <input type="text" class="form-control" name="nombre_edificio" placeholder="Facultad de ingenieria">
+            <input type="text" class="form-control" name="nombre_edificio" placeholder="Facultad de ingenieria" required>
           </div>
           <div class="mb-3">
             <label class="form-label texto_registro">Aforo Maximo</label>
-            <input type="text" class="form-control" name="capacidad_maxima_edificio" placeholder="999999">
+            <input type="text" class="form-control" name="capacidad_maxima_edificio" placeholder="999999" required>
           </div>
           <div class="d-grid gap-2 pt-4 boton">
             <button type="submit" value="Guardar" class="btn btn-primary" type="button">Guardar</button>
