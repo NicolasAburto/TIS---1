@@ -24,7 +24,7 @@
                     <a class="nav-link navbarlinks" href="envivo.php">En Vivo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbarlinks" href="#">Datos anteriores</a>
+                    <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
 
                 <a href="acceso.php">
