@@ -37,11 +37,11 @@
                     <h3 align="center" class="mb-5">Formulario de registro de personal</h3>
                     <div class="mb-3">
                         <label class="form-label texto_registro">Run</label>
-                        <input type="text" class="form-control" name="input_run_personal" placeholder="123456789">
+                        <input type="text" class="form-control" name="input_run_personal" placeholder="123456789" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label texto_registro">Nombre</label>
-                        <input type="text" class="form-control" name="input_nombre_personal" placeholder="Felipe Valentín Muñoz">
+                        <input type="text" class="form-control" name="input_nombre_personal" placeholder="Felipe Valentín Muñoz" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label texto_registro">Cargo</label>
