@@ -46,7 +46,7 @@
                     
                     <div class="mb-3">
                         <label class="form-label texto_registro">Nombre</label>
-                        <input type="text" class="form-control" name="input_nombre_personal" value="<?php echo "$nombre_personal_recibido" ?>">
+                        <input type="text" class="form-control" name="input_nombre_personal" value="<?php echo "$nombre_personal_recibido" ?>" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label texto_registro">Cargo</label>
