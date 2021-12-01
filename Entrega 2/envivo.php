@@ -1,5 +1,9 @@
 <?php
     require("conexion.php");
+
+    $queryenvivo = "SELECT run_personal FROM `puede` WHERE fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivo=mysqli_query($conexion,$queryenvivo);
+    $numero = mysqli_num_rows($resultadoenvivo);
 ?>
 
 <!doctype html>
@@ -22,7 +26,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="https://www.ucsc.cl/">
                 <img src="CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
-                Aforo UCSC  - En vivo
+                Aforo UCSC - En vivo
             </a>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
@@ -47,10 +51,10 @@
     <div class="container-fluid fondoportal">
         <div class="row capacontainer">
             <div class="col-lg-12 border">
-                <div class="container contenedor_portal">
+                <div class="container contenedor_envivo">
                     <div class="col">
                         <!--Borrar --cantidad-- -->
-                        <h2 name="cantidad">--Cantidad--</h2>
+                        <h2 name="cantidad" class="cantidad_envivo"><?php echo "$numero"?></h2>
                         <h4>Personas actualmente</h4>
                     </div>
                     
