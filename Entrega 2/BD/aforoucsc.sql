@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2021 a las 00:51:43
+-- Tiempo de generación: 01-12-2021 a las 02:22:28
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -18,40 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `aforoucsc`
+-- Base de datos: `aforoucsc2`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `edificio`
---
-
-CREATE TABLE `edificio` (
-  `id_edificio` int(5) NOT NULL,
-  `nombre_edificio` varchar(30) NOT NULL,
-  `capacidad_maxima_edificio` int(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `personal`
---
-
-CREATE TABLE `personal` (
-  `run` int(9) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `cargo` varchar(14) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `personal`
---
-
-INSERT INTO `personal` (`run`, `nombre`, `cargo`) VALUES
-(123, 'felixe', 'Seguridad'),
-(55555, '', 'Docente');
 
 -- --------------------------------------------------------
 
@@ -62,28 +30,22 @@ INSERT INTO `personal` (`run`, `nombre`, `cargo`) VALUES
 CREATE TABLE `puede` (
   `run_personal` int(11) NOT NULL,
   `id_edificio` int(11) NOT NULL,
-  `cantidad_maxima_edificio` int(11) NOT NULL,
-  `cantidad_minima_edificio` int(11) NOT NULL,
-  `tiempo_cant_minima` time NOT NULL,
-  `tiempo_cant_maxima` time NOT NULL,
-  `fecha` date NOT NULL
+  `fecha_ingreso` date NOT NULL,
+  `hora_ingreso` time NOT NULL,
+  `hora_salida` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `puede`
+--
+
+INSERT INTO `puede` (`run_personal`, `id_edificio`, `fecha_ingreso`, `hora_ingreso`, `hora_salida`) VALUES
+(11, 2, '2021-11-30', '22:00:00', '23:00:00'),
+(22, 2, '2021-11-30', '22:00:00', '22:30:00');
 
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `edificio`
---
-ALTER TABLE `edificio`
-  ADD PRIMARY KEY (`id_edificio`);
-
---
--- Indices de la tabla `personal`
---
-ALTER TABLE `personal`
-  ADD PRIMARY KEY (`run`);
 
 --
 -- Indices de la tabla `puede`
@@ -91,16 +53,6 @@ ALTER TABLE `personal`
 ALTER TABLE `puede`
   ADD KEY `fk_run_personal` (`run_personal`),
   ADD KEY `fk_id_edificio` (`id_edificio`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `edificio`
---
-ALTER TABLE `edificio`
-  MODIFY `id_edificio` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
