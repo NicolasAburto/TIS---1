@@ -1,9 +1,63 @@
 <?php
     require("conexion.php");
 
+    // cantidad actual
     $queryenvivo = "SELECT run_personal FROM `puede` WHERE fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
     $resultadoenvivo=mysqli_query($conexion,$queryenvivo);
     $numero = mysqli_num_rows($resultadoenvivo);
+
+    // capacidad edificio individual
+    // $queryenvivocapedificio = "SELECT capacidad_maxima_edificio FROM `edificio` WHERE nombre_edificio ='Educacion'";
+    // $resultadoenvivocapedificio=mysqli_query($conexion,$queryenvivocapedificio);
+
+    // while($row=mysqli_fetch_assoc($resultadoenvivocapedificio)){
+    //     $numerocapedificio = $row["capacidad_maxima_edificio"];
+    // }
+
+    // capacidad total edificios
+    $queryenvivocaptotal= "SELECT capacidad_maxima_edificio FROM `edificio`";
+    $resultadoenvivocaptotal=mysqli_query($conexion,$queryenvivocaptotal);
+
+    $numerocaptotal = 0;
+    while($row=mysqli_fetch_assoc($resultadoenvivocaptotal)){
+        $numerocaptotal += $row['capacidad_maxima_edificio'];
+    }
+
+    // alumno
+    $queryenvivoalum = "SELECT run_personal FROM `puede`,`personal` WHERE run_personal = run AND cargo='alumno' 
+                        AND fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivoalum=mysqli_query($conexion,$queryenvivoalum);
+    $numeroalum = mysqli_num_rows($resultadoenvivoalum);
+    
+    // docente
+    $queryenvivodoc = "SELECT run_personal FROM `puede`,`personal` WHERE run_personal = run AND cargo='Docente' 
+                        AND fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivodoc=mysqli_query($conexion,$queryenvivodoc);
+    $numerodoc = mysqli_num_rows($resultadoenvivodoc);
+
+    // Administrativo
+    $queryenvivoadm = "SELECT run_personal FROM `puede`,`personal` WHERE run_personal = run AND cargo='Administrativo' 
+                        AND fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivoadm=mysqli_query($conexion,$queryenvivoadm);
+    $numeroadm = mysqli_num_rows($resultadoenvivoadm);
+
+    // Auxiliar
+    $queryenvivoaux = "SELECT run_personal FROM `puede`,`personal` WHERE run_personal = run AND cargo='Auxiliar aseo' 
+                        AND fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivoaux=mysqli_query($conexion,$queryenvivoaux);
+    $numeroaux = mysqli_num_rows($resultadoenvivoaux);
+
+    // Mantención
+    $queryenvivoman= "SELECT run_personal FROM `puede`,`personal` WHERE run_personal = run AND cargo='Mantencion' 
+                        AND fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivoman=mysqli_query($conexion,$queryenvivoman);
+    $numeroman = mysqli_num_rows($resultadoenvivoman);
+
+    // Seguridad
+    $queryenvivoseg = "SELECT run_personal FROM `puede`,`personal` WHERE run_personal = run AND cargo='Seguridad' 
+                        AND fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
+    $resultadoenvivoseg=mysqli_query($conexion,$queryenvivoseg);
+    $numeroseg = mysqli_num_rows($resultadoenvivoseg);
 ?>
 
 <!doctype html>
@@ -50,47 +104,44 @@
 
     <div class="container-fluid fondoportal">
         <div class="row capacontainer">
-            <div class="col-lg-12 border">
+            <div class="col-lg-12">
                 <div class="container contenedor_envivo">
-                    <div class="col">
                         <!--Borrar --cantidad-- -->
                         <h2 name="cantidad" class="cantidad_envivo"><?php echo "$numero"?></h2>
                         <h4>Personas actualmente</h4>
-                    </div>
-                    
                 </div>
             </div>
-            <div class="container-fluid ">
-                <div class="row contenedor_datosanteriores">
-                    <div class="col-lg-3 col-md-5 col-sm-6 col-xs-3">
-                        <h3  class="ms-3">Capacidad total</h3>
-                        <h3  class="ms-3">Aforo máximo</h3>
-                        <h3  class="ms-3">Tiempo aforo máx.</h3>
-                        <h3  class="ms-3">Alumnos</h3>
-                        <h3  class="ms-3">Docentes</h3>
-                        <h3  class="ms-3">Administrativos</h3>
+            <div class="container-fluid">
+                <div class="row contenedor_datosenvivo">
+                    <div class="col-lg-3 col-md-5 col-sm-7">
+                        <h3>Capacidad total</h3>
+                        <h3>Aforo máximo</h3>
+                        <h3>Tiempo aforo máx.</h3>
+                        <h3>Alumnos</h3>
+                        <h3>Docentes</h3>
+                        <h3>Administrativos</h3>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-4">
-                        <h3>300 Personas</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
+                    <div class="col-lg-3 col-md-4 col-sm-5">
+                        <h3><?php echo "$numerocaptotal"?> Personas</h3>
+                        <h3><?php echo "$numeroalum"?> Personas</h3>
+                        <h3><?php echo "$numeroalum"?> Personas</h3>
+                        <h3><?php echo "$numeroalum"?> Personas</h3>
+                        <h3><?php echo "$numerodoc"?> Personas</h3>
+                        <h3><?php echo "$numeroadm"?> Personas</h3>
                     </div>
-                    <div class="col-lg-3 col-md-5 col-sm-6">
-                        <h3  class="ms-3">Aforo mínimo</h3>
-                        <h3  class="ms-3">Tiempo aforo mín.</h3>
-                        <h3  class="ms-3">Auxiliar</h3>
-                        <h3  class="ms-3">Mantención</h3>
-                        <h3  class="ms-3">Seguridad</h3>
+                    <div class="col-lg-3 col-md-5 col-sm-7">
+                        <h3>Aforo mínimo</h3>
+                        <h3>Tiempo aforo mín.</h3>
+                        <h3>Auxiliar</h3>
+                        <h3>Mantención</h3>
+                        <h3>Seguridad</h3>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-4">
-                        <h3>300 Personas</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
-                        <h3>--cantidad--</h3>
+                    <div class="col-lg-3 col-md-4 col-sm-5">
+                        <h3><?php echo "$numeroalum"?> Personas</h3>
+                        <h3><?php echo "$numeroalum"?> Personas</h3>
+                        <h3><?php echo "$numeroaux"?> Personas</h3>
+                        <h3><?php echo "$numeroman"?> Personas</h3>
+                        <h3><?php echo "$numeroseg"?> Personas</h3>
                     </div>
                 </div>
             </div>
