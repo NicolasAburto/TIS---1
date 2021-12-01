@@ -1,3 +1,7 @@
+<?php
+    require("conexion.php");
+?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -7,7 +11,11 @@
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Aforo UCSC - En vivo</title>
-    
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,30 +56,50 @@
                     
                 </div>
             </div>
-
-            <div class="col-lg-12 border">
-                <div class="container-fluid containerinfoenvivo">
-                    <div class="row">
-                        <div class="col">
-                            <h3>Capacidad total</h3>
-                            <h3>Aforo máximo</h3>
-                            <h3>Tiempo aforo máx.</h3>
-                            <h3>Alumnos</h3>
-                            <h3>Docentes</h3>
-                            <h3>Administrativos</h3>
-                        </div>
-                        <div class="col">
-                            <h3>--cantidad</h3>
-                        </div>
+            <div class="container-fluid ">
+                <div class="row contenedor_datosanteriores">
+                    <div class="col-lg-3 col-md-5 col-sm-6 col-xs-3">
+                        <h3  class="ms-3">Capacidad total</h3>
+                        <h3  class="ms-3">Aforo máximo</h3>
+                        <h3  class="ms-3">Tiempo aforo máx.</h3>
+                        <h3  class="ms-3">Alumnos</h3>
+                        <h3  class="ms-3">Docentes</h3>
+                        <h3  class="ms-3">Administrativos</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                        <h3>300 Personas</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-6">
+                        <h3  class="ms-3">Aforo mínimo</h3>
+                        <h3  class="ms-3">Tiempo aforo mín.</h3>
+                        <h3  class="ms-3">Auxiliar</h3>
+                        <h3  class="ms-3">Mantención</h3>
+                        <h3  class="ms-3">Seguridad</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                        <h3>300 Personas</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
+                        <h3>--cantidad--</h3>
                     </div>
                 </div>
             </div>
             
             <div class="col-lg-12">
-                <footer>
-                    <p>Unidad de Infraestructura DO - UCSC.</p>
+                <footer class="footerenvivo">
+                    <p class="textofooterenvivo">Unidad de Infraestructura DO - UCSC. Todos los derechos reservados 2021
+                        <span class="material-icons copyenvivo">
+                            copyright
+                        </span>
+                    </p>
                     <a href="https://portal.ucsc.cl/">
-                        <label>Ir a Portal Institucional</label>
+                        <label class="linkfooterenvivo">Ir a Portal Institucional</label>
                     </a>
                 </footer>
             </div>
