@@ -47,7 +47,7 @@
                     <div class="row margen">
                         <h2>Acceso UCSC</h2>
                             <label>Usuario</label>
-                            <input name="input_user" type="text">
+                            <input name="input_user" type="text" required>
                             <button type="submit" value="acceder" class="btn btn-primary mt-4" type="button">Acceder</button>
                         <!-- <a align="center" href="index_manten.php"><button  class="btn btn-primary" type="button">Acceder</button></a> -->
                     </div>
