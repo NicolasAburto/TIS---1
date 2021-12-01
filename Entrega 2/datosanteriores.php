@@ -54,17 +54,17 @@
                 <div class="form-check d-inline-flex me-1">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                     <label class="form-check-label ps-1" for="flexRadioDefault2">
-                        Mes
+                        Semana
                     </label>
                 </div>
                 <div class="form-check d-inline-flex">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                     <label class="form-check-label ps-1" for="flexRadioDefault2">
-                        Año
+                        Mes
                     </label>
                 </div>
                 <br>
-                <input type="date" name="fecha_elegida" class="">
+                <input type="date" name="fecha_elegida">
                 <br>
                 <button type="submit" value="buscar" class="btn btn-primary ms- mt-3 mb-4 buscar"  type="button">Buscar</button>
             </div>
