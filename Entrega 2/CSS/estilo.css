@@ -102,9 +102,17 @@ footer{
     height: 80px;
 }
 
-.contenedor_portal{
-    padding: 8%;
-    padding-bottom: 5%;
+.contenedor_envivo{
+    padding: 5%;
+}
+
+.contenedor_datosenvivo{
+    background-color: rgba(255, 255, 255, 0.808);
+    border-style: solid;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 h4{
@@ -127,14 +135,6 @@ h3{
     margin-right: 0.5%;
 }
 
-.colum1{
-    display: flex;
-}
-
-.colum2{
-    display: inline-flex;
-}
-
 .textofooterenvivo{
     font-size: 120%;
     font-weight: 700;
@@ -154,7 +154,11 @@ h3{
 .footerenvivo{
     text-align: center;
     margin-top: 3.5%;
-    padding-bottom: 53px;
+    padding-bottom: 58px;
+}
+
+.cantidad_envivo{
+    font-size: 500%;
 }
 
 .fondodatosanteriores{
@@ -164,11 +168,10 @@ h3{
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 877px;
-    padding-top: 8%;
 }
 
 .contenedor_datosanteriores{
-    background-color: rgba(255, 255, 255, 0.521);
+    background-color: rgba(255, 255, 255, 0.808);
     border-style: solid;
     padding-top: 1%;
     padding-bottom: 1.5%;
@@ -185,4 +188,25 @@ h3{
     position: relative;
     left: 43%;
     width: 12%;
+}
+
+.margendatosant{
+    padding-left: 11%;
+}
+
+.fecha_datosant{
+    position: relative;
+    left: 80%;
+    margin-top: 2%;    
+    margin-bottom: 3%;
+}
+
+.margen_fecha{
+    padding-left: 30%;
+}
+
+.buscar{
+    min-width: 47%;
+    background-color: black;
+    color: white;
 }
