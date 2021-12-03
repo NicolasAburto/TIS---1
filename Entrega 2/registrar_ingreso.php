@@ -40,8 +40,9 @@
                     <input type="text" class="form-control" name="input_run_personal" placeholder="123456789" required>
                     <select name="input_edificio" class="opc_cargo">
                         <?php
-                            $query = $mysqli -> query ("SELECT * FROM edificio");
-                            while ($valores = mysqli_fetch_array($query)) {
+                            $consulta = "SELECT * FROM edificio";
+                            $resultado = mysqli_query($conexion, $consulta);
+                            while ($valores = mysqli_fetch_assoc($resultado)) {
                                 $id = $valores['id_edificio'];
                                 $nombre = $valores['nombre_edificio'];
                                 echo "<option value='".$id."'>".$nombre."</option>";
