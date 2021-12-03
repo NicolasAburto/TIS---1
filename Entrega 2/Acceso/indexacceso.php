@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Acceso a un Edificio UCSC - Campus San Andrés</title>
@@ -45,15 +45,15 @@
         <div class="row capacontainer">
             <div class="container-fluid">
                 <form action="ingresar.php" method="POST">
-                    <h3>Ingrese su rut:</h3>
+                    <h5>Ingrese su rut:</h5>
                     <input type="text" name="rut_acceso" placeholder="123456789">
-                    <h3>Seleccione edificio a Acceder:</h3>
+                    <h5>Seleccione edificio a Acceder:</h5>
                     <input type="text" name="edificio_acceso" placeholder="ID Edificio">
-                    <h3>Ingrese fecha de Acceso:</h3>
+                    <h5>Ingrese fecha de Acceso:</h5>
                     <input type="date" name="fecha_acceso">
-                    <h3>Ingrese hora de ingreso al edificio:</h3>
+                    <h5>Ingrese hora de ingreso al edificio:</h5>
                     <input type="time" name="hora_ingreso">
-                    <h3>Ingrese hora de abandono del edificio:</h3>
+                    <h5>Ingrese hora de abandono del edificio:</h5>
                     <input type="time" name="hora_salida">
                     <br>
                     <input type="submit" value="Ingresar">
@@ -101,3 +101,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
+
