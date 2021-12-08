@@ -1,6 +1,6 @@
 <?php
     require("conexion.php");
-
+    //include("auth.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
                     <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
 
-                <a href="acceso.php">
+                <a href="logout.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
                     </span>

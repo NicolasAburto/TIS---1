@@ -1,3 +1,7 @@
+
+<?php
+    //include("auth.php"); 
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -27,7 +31,7 @@
                     <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
 
-                <a href="acceso.php">
+                <a href="logout.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
                     </span>
@@ -65,6 +69,9 @@
                     <div class="row" align="center">
                         <div class="col">
                         <a class="btn btn-outline-secondary _a" href="registrar_ingreso.php" role="button">Registrar Ingreso</a>
+                        </div>
+                        <div class="col">
+                        <a class="btn btn-outline-secondary _a" href="registrar_salida.php" role="button">Registrar Salida</a>
                         </div>
                     </div>
                 </div>

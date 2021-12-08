@@ -21,7 +21,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="https://www.ucsc.cl/">
                 <img src="CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
-                Aforo UCSC - Registrar Ingreso
+                Aforo UCSC - Registrar Salida
             </a>
             <a align="center" href="logout.php" class="cerrarsesion boton">
                 <button value="cerrarsesion" class="btn btn-primary" type="button">Cerrar sesión</button>
@@ -33,24 +33,13 @@
     <div class="container-fluid fondo">
         <div class="row">
             <div class="col-lg-12 mt-5">
-                <h1 align="center">Registrar Ingreso</h1>
+                <h1 align="center">Registrar Salida</h1>
             </div>
             <div class="col" align="center">
                 <div class="mantenedor">
                     <h1>Personal</h1>
-                    <form action="ingreso.php" method="POST">
+                    <form action="salida.php" method="POST">
                         <input type="text" class="form-control" name="input_run_personal" placeholder="123456789" required>
-                        <select name="input_edificio" class="opc_cargo">
-                            <?php
-                                $consulta = "SELECT * FROM edificio";
-                                $resultado = mysqli_query($conexion, $consulta);
-                                while ($valores = mysqli_fetch_assoc($resultado)) {
-                                    $id_edificio = $valores['id_edificio'];
-                                    $nombre_edificio = $valores['nombre_edificio'];
-                                    echo "<option value='".$id_edificio."'>".$nombre_edificio."</option>";
-                                }
-                            ?>
-                            </select>
                         <input class="btn btn-primary mt-3" type="submit" Value="Registrar">
                     </form>
                 </div>

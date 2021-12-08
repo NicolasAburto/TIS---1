@@ -1,5 +1,6 @@
 <?php
     require("conexion.php");
+    //include("auth.php"); 
 
     // cantidad actual
     $queryenvivo = "SELECT run_personal FROM `puede` WHERE fecha_ingreso = (select CURDATE()) AND hora_ingreso < (SELECT curTime()) AND (SELECT curTime()) < hora_salida";
