@@ -53,6 +53,46 @@
                             </select>
                         <input class="btn btn-primary mt-3" type="submit" Value="Registrar">
                     </form>
+                    <div class="col">
+                        <?php
+                            echo "<h1>Listado</h1>";
+                            
+                            
+                            echo "<table border=1>";
+                                echo "<tr>";
+                                    echo "<th>";
+                                        echo "Nombre";
+                                    echo "</th>";
+                                    echo "<th>";
+                                        echo "Hora Ingreso";
+                                    echo "</th>";
+                                    echo "<th>";
+                                        echo "Hora Salida";
+                                    echo "</th>";
+                                echo "</tr>";
+                                $fecha = date('Y-m-d');
+                                $query = "SELECT personal.nombre, puede.hora_ingreso, puede.hora_salida FROM personal, puede WHERE fecha_ingreso='$fecha' AND personal.run = puede.run_personal ORDER BY hora_ingreso DESC";
+                                $res = mysqli_query($conexion,$query);
+
+                            while($row=mysqli_fetch_assoc($res)){
+                                $nombre = $row["nombre"];
+                                $hora_ingreso = $row["hora_ingreso"];
+                                $hora_salida = $row["hora_salida"];
+                                echo "<tr>";
+                                    echo "<td>";
+                                        echo "$nombre";
+                                    echo "</td>";
+                                    echo "<td>";
+                                        echo "$hora_ingreso";
+                                    echo "</td>";
+                                    echo "<td>";
+                                        echo "$hora_salida";
+                                    echo "</td>";
+                                echo "</tr>"; 
+                            }
+                            echo "</table>";
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
