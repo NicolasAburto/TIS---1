@@ -164,7 +164,7 @@
                             
             </div>
             <div class="col-lg-6">
-                <h3>Edificios Actualmente:</h3>
+                <h3>Edificios Campus San Andrés Actualmente:</h3>
                 <div id="chart_div" style="width: 400px; height: 120px;"></div>
             </div>
             
