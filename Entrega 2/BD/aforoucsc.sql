@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2021 a las 03:29:24
+-- Tiempo de generación: 16-12-2021 a las 00:18:07
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `aforoucsc`
+-- Base de datos: `aforoucsc2`
 --
 
 -- --------------------------------------------------------
@@ -39,8 +39,7 @@ CREATE TABLE `edificio` (
 
 INSERT INTO `edificio` (`id_edificio`, `nombre_edificio`, `capacidad_maxima_edificio`) VALUES
 (2, 'Educacion', 120),
-(3, 'Periodismo', 50),
-(4, 'Ingeniería', 150);
+(3, 'Periodismo', 50);
 
 -- --------------------------------------------------------
 
@@ -62,8 +61,7 @@ INSERT INTO `personal` (`run`, `nombre`, `cargo`) VALUES
 (11, 'Nicolas Aburto', 'Alumno'),
 (22, 'Camilo Fierro', 'Alumno'),
 (33, 'Hugo Garces', 'Docente'),
-(44, 'Alvaro Concha', 'Seguridad'),
-(181460148, 'Camilo Fernando Fierro Montt', 'Administrativo');
+(44, 'Alvaro Concha', 'Seguridad');
 
 -- --------------------------------------------------------
 
@@ -76,24 +74,40 @@ CREATE TABLE `puede` (
   `id_edificio` int(11) NOT NULL,
   `fecha_ingreso` date NOT NULL,
   `hora_ingreso` time NOT NULL,
-  `hora_salida` time DEFAULT NULL
+  `hora_salida` time NOT NULL,
+  `id_ingreso` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `puede`
 --
 
-INSERT INTO `puede` (`run_personal`, `id_edificio`, `fecha_ingreso`, `hora_ingreso`, `hora_salida`) VALUES
-(11, 2, '2021-11-30', '22:00:00', '23:00:00'),
-(22, 2, '2021-11-30', '22:00:00', '22:30:00'),
-(33, 3, '2021-12-01', '10:00:00', '12:50:00'),
-(44, 2, '2021-12-01', '11:20:00', '11:28:00'),
-(44, 3, '2021-12-01', '11:30:00', '11:31:00'),
-(44, 2, '2021-12-01', '11:32:00', '11:35:00'),
-(181460148, 2, '2021-12-07', '22:53:21', '23:28:34'),
-(181460148, 2, '2021-12-07', '22:53:25', '23:28:34'),
-(181460148, 2, '2021-12-07', '22:54:11', '23:28:34'),
-(181460148, 4, '2021-12-07', '23:28:11', '23:28:34');
+INSERT INTO `puede` (`run_personal`, `id_edificio`, `fecha_ingreso`, `hora_ingreso`, `hora_salida`, `id_ingreso`) VALUES
+(11, 2, '2021-11-30', '22:00:00', '23:00:00', 1),
+(22, 2, '2021-11-30', '22:00:00', '22:30:00', 2),
+(33, 3, '2021-12-01', '10:00:00', '12:50:00', 3),
+(44, 2, '2021-12-01', '11:20:00', '11:28:00', 4),
+(44, 3, '2021-12-01', '11:30:00', '11:31:00', 5),
+(44, 2, '2021-12-01', '11:32:00', '11:35:00', 6),
+(44, 2, '2021-12-02', '22:40:00', '22:45:00', 7),
+(11, 2, '2021-12-09', '19:15:00', '19:25:00', 8),
+(11, 2, '2021-12-09', '19:25:00', '20:00:00', 9),
+(44, 3, '2021-12-09', '19:26:00', '19:58:00', 10),
+(11, 2, '2021-12-14', '11:28:00', '11:50:00', 11),
+(11, 2, '2021-12-15', '18:50:00', '19:00:00', 12),
+(44, 3, '2021-12-15', '18:50:00', '19:15:00', 13),
+(11, 2, '2021-12-15', '19:04:00', '19:50:00', 14),
+(33, 3, '2021-12-15', '18:59:00', '19:30:00', 15),
+(22, 2, '2021-12-15', '19:24:00', '19:31:00', 16),
+(44, 3, '2021-12-15', '19:25:00', '19:35:00', 17),
+(11, 2, '2021-12-15', '19:50:00', '20:00:00', 18),
+(22, 2, '2021-12-15', '19:50:00', '20:00:00', 19),
+(33, 3, '2021-12-15', '19:50:00', '19:55:00', 20),
+(44, 3, '2021-12-15', '19:50:00', '20:01:00', 21),
+(11, 2, '2021-12-15', '20:03:00', '20:11:00', 22),
+(22, 3, '2021-12-15', '20:03:00', '20:12:00', 23),
+(33, 3, '2021-12-15', '20:03:00', '20:13:00', 24),
+(44, 3, '2021-12-15', '20:02:00', '20:14:00', 25);
 
 --
 -- Índices para tablas volcadas
@@ -115,6 +129,7 @@ ALTER TABLE `personal`
 -- Indices de la tabla `puede`
 --
 ALTER TABLE `puede`
+  ADD PRIMARY KEY (`id_ingreso`),
   ADD KEY `fk_run_personal` (`run_personal`),
   ADD KEY `fk_id_edificio` (`id_edificio`);
 
@@ -126,7 +141,13 @@ ALTER TABLE `puede`
 -- AUTO_INCREMENT de la tabla `edificio`
 --
 ALTER TABLE `edificio`
-  MODIFY `id_edificio` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_edificio` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `puede`
+--
+ALTER TABLE `puede`
+  MODIFY `id_ingreso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Restricciones para tablas volcadas
