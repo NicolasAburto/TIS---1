@@ -1,3 +1,3 @@
 <?php
-    $conexion = mysqli_connect("localhost","root","","aforoucsc2");
+    $conexion = mysqli_connect("localhost","root","","aforoucsc");
 ?>
