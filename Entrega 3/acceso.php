@@ -14,10 +14,9 @@
 
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://www.ucsc.cl/">
+            <a class="navbar-brand" href="index.php">
                 <img src="CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
                 Aforo UCSC - Administrador
             </a>
@@ -46,7 +45,7 @@
                 <div class="col">
                     <div class="row margen">
                         <h2>Acceso UCSC</h2>
-                            <label>Usuario</label>
+                            <h5 class="mt-2 mb-2">Run usuario</h5>
                             <input name="input_user" type="text" required>
                             <button type="submit" value="acceder" class="btn btn-primary mt-4" type="button">Acceder</button>
                         <!-- <a align="center" href="index_manten.php"><button  class="btn btn-primary" type="button">Acceder</button></a> -->

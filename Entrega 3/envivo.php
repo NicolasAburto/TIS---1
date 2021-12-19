@@ -6,13 +6,19 @@
     $resultadoenvivo=mysqli_query($conexion,$queryenvivo);
     $numero = mysqli_num_rows($resultadoenvivo);
 
-    // capacidad edificio individual
-    // $queryenvivocapedificio = "SELECT capacidad_maxima_edificio FROM `edificio` WHERE nombre_edificio ='Educacion'";
-    // $resultadoenvivocapedificio=mysqli_query($conexion,$queryenvivocapedificio);
+    // Aforo maximo
+    $queryenvivoaforomax = "SELECT run_personal FROM `puede`";
+    $resultadoenvivoaforomax=mysqli_query($conexion,$queryenvivoaforomax);
+    $numeroaforomax = mysqli_num_rows($resultadoenvivoaforomax);
 
-    // while($row=mysqli_fetch_assoc($resultadoenvivocapedificio)){
-    //     $numerocapedificio = $row["capacidad_maxima_edificio"];
-    // }
+    // Tiempo aforo maximo
+    $queryenvivotiempoaforomax = "SELECT TRUNCATE(SUM(TIME_TO_SEC(hora_salida) - TIME_TO_SEC(hora_ingreso))/60,0) as Tiempo_aforo_max FROM `puede`";
+    $resultadoenvivotiempoaforomax=mysqli_query($conexion,$queryenvivotiempoaforomax);
+
+    $numerotiempoaforomax = 0;
+    while($row=mysqli_fetch_assoc($resultadoenvivotiempoaforomax)){
+        $numerotiempoaforomax = $row['Tiempo_aforo_max'];
+    }
 
     // capacidad total edificios
     $queryenvivocaptotal= "SELECT capacidad_maxima_edificio FROM `edificio`";
@@ -76,11 +82,28 @@
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
+    
+    <script src="jquery.js"></script>
+    <script src="jquery.knob.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('.dial').knob({
+            'min':0,
+            'max':100,
+            'width':250,
+            'height':250,
+            'displayInput':true,
+            'fgColor':"#000000",
+            'release':function(v) {$("").text(v);},
+            'readOnly':true
+        });
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://www.ucsc.cl/">
+            <a class="navbar-brand" href="index.php">
                 <img src="CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
                 Aforo UCSC - En vivo
             </a>
@@ -107,28 +130,31 @@
     <div class="container-fluid fondoportal">
         <div class="row capacontainer">
             <div class="col-lg-12">
-                <div class="container contenedor_envivo">
+                <div class="container contenedor_envivo" align="center">
                         <!--Borrar --cantidad-- -->
                         <h2 name="cantidad" class="cantidad_envivo"><?php echo "$numero"?></h2>
-                        <h4>Personas actualmente</h4>
+                        <h4 class="mb-5">Persona(s) actualmente</h4>
+                        <input type="text" value="<?php $porcentaje= (($numero*100)/$numerocaptotal); echo round("$porcentaje")?>" class="dial">
+                        <h2 class="mt-3 textocircle">Total persona(s) recinto (%)</h2>
                 </div>
             </div>
             
             <div class="container-fluid">
                 <button onclick="mostrargrafico()" value="mostgrafico" class="btn btn-primary mb-4 botongrafico" type="button">Mostrar gráfico</button>
+                <button value="pdf" class="btn btn-primary mb-4 botongrafico" type="button"><a class="pdf" href="dompdf/generar_reporte_envivo.php">Generar Reporte</a></button>
                 <div class="row contenedor_datosenvivo">
                     <div id="graph">
-                        <canvas id="myChart" width="400" height="50" class="mb-5"></canvas>
+                        <canvas id="myChart" width="400" height="80" class="mb-5"></canvas>
                         <script>
                         const ctx = document.getElementById('myChart').getContext('2d');
                         const myChart = new Chart(ctx, {
                             type: 'bar',
                             data: {
-                                labels: ['Capacidad total', 'Aforo máximo', 'Tiempo aforo máx.', 'Aforo mínimo', 'Tiempo aforo mín.', 'Alumnos', 
+                                labels: ['Capacidad total', 'Aforo máximo', 'Alumnos', 
                                 'Docentes', 'Administrativos', 'Auxiliar', 'Mantención', 'Seguridad'],
                                 datasets: [{
                                     label: 'Gráfico en vivo',
-                                    data: [<?php echo "$numerocaptotal"?> , <?php echo ""?>, <?php echo ""?>, <?php echo ""?>, <?php echo ""?>, <?php echo "$numeroalum"?>,
+                                    data: [<?php echo "$numerocaptotal"?> , <?php echo "$numeroaforomax"?>, <?php echo "$numeroalum"?>,
                                     <?php echo "$numerodoc"?>, <?php echo "$numeroadm"?>, <?php echo "$numeroaux"?>,<?php echo "$numeroman"?>, <?php echo "$numeroseg"?>],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
@@ -161,37 +187,30 @@
                     </div>
                     
                     <div class="col-lg-3 col-md-5 col-sm-7">
-                        
-                            <h3>Capacidad total</h3>
-                            <h3>Aforo máximo</h3>
-                            <h3>Tiempo aforo máx.</h3>
-                            <h3>Alumnos</h3>
-                            <h3>Docentes</h3>
-                            <h3>Administrativos</h3>
-                        
+                        <h3>Capacidad total</h3>
+                        <h3>Aforo máximo</h3>
+                        <h3>Tiempo aforo máx.</h3>
+                        <h3>Alumnos</h3>
+                        <h3>Docentes</h3>
+                        <h3>Administrativos</h3>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5">
                         <h3><?php echo "$numerocaptotal"?> Personas</h3>
-                        <h3><?php echo ""?> Personas</h3>
-                        <h3><?php echo ""?> Minutos</h3>
+                        <h3><?php echo "$numeroaforomax"?> Personas</h3>
+                        <h3><?php echo "$numerotiempoaforomax"?> Minutos</h3>
                         <h3><?php echo "$numeroalum"?> Personas</h3>
                         <h3><?php echo "$numerodoc"?> Personas</h3>
                         <h3><?php echo "$numeroadm"?> Personas</h3>
                     </div>
                     <div class="col-lg-3 col-md-5 col-sm-7">
-                        <h3>Aforo mínimo</h3>
-                        <h3>Tiempo aforo mín.</h3>
                         <h3>Auxiliar</h3>
                         <h3>Mantención</h3>
                         <h3>Seguridad</h3>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5">
-                        <h3><?php echo ""?> Personas</h3>
-                        <h3><?php echo ""?> Minutos</h3>
                         <h3><?php echo "$numeroaux"?> Personas</h3>
                         <h3><?php echo "$numeroman"?> Personas</h3>
                         <h3><?php echo "$numeroseg"?> Personas</h3>
-                        <a href="dompdf/generar_reporte_envivo.php">Generar Reporte</a>
                     </div>
                 </div>
             </div>
@@ -211,6 +230,20 @@
         </div>
     </div>
 
+    <!-- Actualizar pagina (funciona) -->
+    <script>
+        var x = document.getElementById("graph");
+        let counter = 1;
+        setInterval(() =>{
+            if (x.style.display == "block") {
+
+            }else{
+                if(counter > 3) location.reload();
+            }
+            counter ++;
+            
+        }, 1000);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
