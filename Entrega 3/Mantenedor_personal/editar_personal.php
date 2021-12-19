@@ -1,4 +1,5 @@
 <?php
+    include("../auth.php"); 
     require("conexion.php");
     $run_personal_recibido=$_GET["seleccionado"];
     $consulta = "SELECT * FROM personal WHERE run=$run_personal_recibido";
@@ -27,11 +28,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index_personal.php">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
                 Aforo UCSC - Personal
             </a>
-            <a align="center" href="../acceso.php" class="cerrarsesion boton">
+            <a align="center" href="../logout.php" class="cerrarsesion boton">
                 <button value="cerrarsesion" class="btn btn-primary" type="button">Cerrar sesión</button>
             </a>
         </div>

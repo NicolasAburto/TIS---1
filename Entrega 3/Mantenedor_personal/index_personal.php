@@ -1,4 +1,5 @@
 <?php
+    include("../auth.php"); 
     require("conexion.php");
 ?>
 
@@ -10,6 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal BD</title>
     <link rel="stylesheet" href="../CSS/estilo_mantenedor.css">
+    <script type="text/javascript" src="JS/funcion_datoant.js"></script>
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/addons/datatables.min.js"></script>
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,11 +26,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://www.ucsc.cl/">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../CSS/logoucsc.png" alt="" width="100" height="33" class="d-inline-block align-text-top">
                 Aforo UCSC - Personal
             </a>
-            <a align="center" href="../acceso.php" class="cerrarsesion boton">
+            <a align="center" href="../logout.php" class="cerrarsesion boton">
                 <button value="cerrarsesion" class="btn btn-primary" type="button">Cerrar sesión</button>
             </a>
 
@@ -61,10 +70,11 @@
                             <button value="atras" class="btn btn-primary atras" type="button">Atrás</button>
                         </a>
                     </div>
-
                 </form>
             </div>
 
+
+            
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="listado_personal">
                     <table class="table table-bordered border-primary texto_listado">
@@ -109,8 +119,6 @@
             </div>
         </div>
     </div>
-
-
         <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
