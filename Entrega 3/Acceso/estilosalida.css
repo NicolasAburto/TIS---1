@@ -1,0 +1,61 @@
+.footeringreso{
+    text-align: center;
+    margin-top: 3.5%;
+    padding-bottom: 69px;
+}
+
+.linkfooteringreso{
+    text-decoration: underline;
+    font-size: 110%;
+    color: blue;
+}
+
+.textofooteringreso{
+    font-size: 120%;
+    font-weight: 700;
+}
+
+.iconousuario{
+    position: relative;
+    top: 8px;
+}
+
+.navbarlinks{
+    color: black;
+}
+
+.fondoportal{
+    background-image: url('../CSS/edificios.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 877px;
+}
+
+.capacontainer{
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+input[type=button],input[type="text"]{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.estadistica{
+    background-color: rgba(255, 255, 255, 0.74);
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
+}
+
+.datos{
+    background-color: rgba(255, 255, 255, 0.74);
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
+}
