@@ -10,7 +10,7 @@
     margin: 25px 25px 25px 25px;
 }
 
-h1, h2, h5, p{
+h1, h2, p{
     text-align: center;
     margin-bottom: 20px;
 }
@@ -67,7 +67,7 @@ h1, h2, h5, p{
 
 footer{
     text-align: center;
-    padding-bottom: 102px;
+    padding-bottom: 114px;
 }
 
 .textofooter{
@@ -103,7 +103,7 @@ footer{
 }
 
 .contenedor_envivo{
-    padding: 3%;
+    padding: 1.5%;
 }
 
 .contenedor_datosenvivo{
@@ -124,6 +124,7 @@ h3{
     padding-top: 1%;
     font-size: 25px;
     padding-left: 10%;
+    font-weight: bold;
 }
 
 .containerinfoenvivo{
@@ -206,30 +207,30 @@ h3{
 }
 
 .buscar{
-    width: 50%;
+    width: 51%;
     background-color: black;
     color: white;
 }
 
 .edificios_datosant{
-    width: 50%;
+    width: 51%;
 }
 
 #dia{
     display: none;
-    width: 50%;
+    width: 51%;
     margin-bottom: 5%;
 }
 
 #semana{
     display: none;
-    width: 50%;
+    width: 51%;
     margin-bottom: 5%;
 }
 
 #mes{
     display: none;
-    width: 50%;
+    width: 51%;
     margin-bottom: 5%;
 }
 
@@ -241,4 +242,27 @@ h3{
 
 #graph{
     display: none;
+}
+
+.textocircle{
+    font-weight: 600;
+}
+
+.faq_capacontainer{
+    background-color: rgba(255, 255, 255, 0.521);
+    height: 877px;
+}
+
+.faq_titulo{
+    font-weight: 700;
+}
+
+.faq_accordion_pregunta{
+    font-weight: 700;
+    font-size: 70%;
+}
+
+.pdf{
+    color: white;
+    text-decoration: none;
 }
