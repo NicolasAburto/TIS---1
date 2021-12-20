@@ -12,6 +12,19 @@
     min-height: 877px;
 }
 
+.titulo_mantenedor{
+    font-weight: bold;
+    margin-top: -1%;
+    font-size: 300%;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.subtitulo_mantenedor{
+    font-weight: 500;
+    font-size: 250%;
+}
+
 .boton button{
     color: rgb(255, 255, 255);
     background-color: rgb(26, 25, 25);
