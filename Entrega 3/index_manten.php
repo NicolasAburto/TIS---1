@@ -1,6 +1,13 @@
 <?php
     include("auth.php"); 
     require("conexion.php");
+
+    $query= "SELECT nombre FROM `personal` WHERE run = '$_SESSION[input_user]'";
+    $resultado=mysqli_query($conexion,$query);
+
+    while($row=mysqli_fetch_assoc($resultado)){
+        $nombre = $row['nombre'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +40,8 @@
     <div class="container-fluid fondo">
         <div class="row">
             <div class="col-lg-12 mt-5">
-                <h1 align="center">MANTENEDORES</h1>
+                <h1 class="titulo_mantenedor mb-3" align="center">Bienvenido/a <?php echo "$nombre"?>!!!</h1>
+                <h1 class="subtitulo_mantenedor" align="center">Administrador - Mantenedores</h1>
             </div>
             <div class="col-lg-6 mt-5" align="center">
                 <div class="mantenedor">
