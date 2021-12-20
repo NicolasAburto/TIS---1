@@ -118,6 +118,10 @@
                     <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link navbarlinks" href="faq.php">FAQ</a>
+                </li>
+                
                 <a href="acceso.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
@@ -141,7 +145,7 @@
             
             <div class="container-fluid">
                 <button onclick="mostrargrafico()" value="mostgrafico" class="btn btn-primary mb-4 botongrafico" type="button">Mostrar gráfico</button>
-                <button value="pdf" class="btn btn-primary mb-4 botongrafico" type="button"><a class="pdf" href="dompdf/generar_reporte_envivo.php">Generar Reporte</a></button>
+                <button value="pdf" class="btn btn-primary mb-4 botongrafico" type="button"><a  href="dompdf/generar_reporte_envivo.php"><label class="pdf">Generar Reporte</label></a></button>
                 <div class="row contenedor_datosenvivo">
                     <div id="graph">
                         <canvas id="myChart" width="400" height="80" class="mb-5"></canvas>
