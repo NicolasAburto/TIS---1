@@ -121,6 +121,10 @@
                     <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link navbarlinks" href="faq.php">FAQ</a>
+                </li>
+
                 <a href="acceso.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
@@ -130,12 +134,12 @@
         </div>
     </nav>
 
-    <div class="container-fluid fondodatosanteriores">
-        <div class="row">
+    <div class="container-fluid fondoportal">
+        <div class="row capacontainer">
             <div class="col-lg-6 col-md-5 col-sm-4"></div>
             <div class="col-lg-6 col-md-7 col-sm-8 margen_fecha">
                 <form action="datosanteriores.php" method="GET">
-                    <select name="input_nombre_edificio" class="edificios_datosant mb-2" required>
+                    <select name="input_nombre_edificio" class="edificios_datosant mb-2 mt-4" required>
                         <option></option>
                         <?php
                         $querydatosant= "SELECT * FROM `edificio`";
@@ -154,19 +158,19 @@
                     <br>
                     <div class="form-check d-inline-flex me-1 mb-3 mt-2">
                         <input onclick="mostrardia()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
-                        <label class="form-check-label ps-1" for="flexRadioDefault1">
+                        <label class="form-check-label ps-1 fw-bold" for="flexRadioDefault1">
                             Día
                         </label>
                     </div>
                     <div class="form-check d-inline-flex me-1">
                         <input onclick="mostrarsemana()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
-                        <label class="form-check-label ps-1" for="flexRadioDefault2">
+                        <label class="form-check-label ps-1 fw-bold" for="flexRadioDefault2">
                             Semana
                         </label>
                     </div>
                     <div class="form-check d-inline-flex">
                         <input onclick="mostrarmes()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" required>
-                        <label class="form-check-label ps-1" for="flexRadioDefault3">
+                        <label class="form-check-label ps-1 fw-bold" for="flexRadioDefault3">
                             Mes
                         </label>
                     </div>
@@ -179,33 +183,45 @@
             </div>
         </div>
 
-        <div class="row contenedor_datosanteriores">  
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <img src="CSS/logoucsc.png" alt="" class="logodatosant">
+        <div class="datosanteriores_capacontainer">        
+            <div class="row contenedor_datosanteriores">  
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <img src="CSS/logoucsc.png" alt="" class="logodatosant">
+                </div>
+                <div class="col-lg-6 col-md-7 col-sm-7 margendatosant">
+                    <h3>Nombre edificio</h3>
+                    <h3>Capacidad edificio</h3>
+                    <h3>Aforo máximo</h3>
+                    <h3>Tiempo aforo máx.</h3>
+                    <h3>Fecha</h3>
+                </div>
+                <div class="col-lg-6 col-md-5 col-sm-5">
+                    <h3 align="center"><?php echo "$input_nombre_edificio"?><br></h3>
+                    <h3 align="center"><?php echo "$numero_capedificio"?> Personas</h3>
+                    <h3 align="center"><?php echo "$numero_aforomaxdia"?><?php echo "$numero_aforomaxsemana"?><?php echo "$numero_aforomaxmes"?> Personas</h3>
+                    <h3 align="center"><?php echo "$numero_tiempoaforomaxdia"?><?php echo "$numero_tiempoaforomaxsemana"?><?php echo "$numero_tiempoaforomaxmes"?> Minutos</h3>
+                    <h3 align="center"><?php echo "$dia"?><?php echo "$semana"?><?php echo "$mes"?></h3>
+                </div>
+                <a align="center" href="#" class="boton mt-5">
+                    <button value="imprimir" class="btn btn-primary" type="button">Imprimir</button>
+                </a>
             </div>
-            <div class="col-lg-6 col-md-7 col-sm-7 margendatosant">
-                <h3>Nombre edificio</h3>
-                <h3>Capacidad edificio</h3>
-                <h3>Aforo máximo</h3>
-                <h3>Tiempo aforo máx.</h3>
-                <h3>Fecha</h3>
+            
+            <div class="col-lg-12">
+                <footer class="footer_datosant">
+                    <p class="textofooterenvivo">Unidad de Infraestructura DO - UCSC. Todos los derechos reservados 2021
+                        <span class="material-icons copyenvivo">
+                            copyright
+                        </span>
+                    </p>
+                    <a href="https://portal.ucsc.cl/">
+                        <label class="linkfooterenvivo">Ir a Portal Institucional</label>
+                    </a>
+                </footer>
             </div>
-            <div class="col-lg-6 col-md-5 col-sm-5">
-                <h3 align="center"><?php echo "$input_nombre_edificio"?><br></h3>
-                <h3 align="center"><?php echo "$numero_capedificio"?> Personas</h3>
-                <h3 align="center"><?php echo "$numero_aforomaxdia"?><?php echo "$numero_aforomaxsemana"?><?php echo "$numero_aforomaxmes"?> Personas</h3>
-                <h3 align="center"><?php echo "$numero_tiempoaforomaxdia"?><?php echo "$numero_tiempoaforomaxsemana"?><?php echo "$numero_tiempoaforomaxmes"?> Minutos</h3>
-                <h3 align="center"><?php echo "$dia"?><?php echo "$semana"?><?php echo "$mes"?></h3>
-            </div>
-            <a align="center" href="#" class="boton mt-5">
-                <button value="imprimir" class="btn btn-primary" type="button">Imprimir</button>
-            </a>
         </div>
     </div>
 
-    <script>
-        
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
