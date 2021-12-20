@@ -26,6 +26,10 @@
                 <li class="nav-item">
                     <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link navbarlinks" href="faq.php">FAQ</a>
+                </li>
 
                 <a href="acceso.php">
                     <span class="material-icons iconousuario text-black">
