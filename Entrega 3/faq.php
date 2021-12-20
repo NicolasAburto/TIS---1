@@ -37,6 +37,10 @@
                     <a class="nav-link navbarlinks" href="datosanteriores.php">Datos anteriores</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link navbarlinks" href="faq.php">FAQ</a>
+                </li>
+
                 <a href="acceso.php">
                     <span class="material-icons iconousuario text-black">
                         account_circle
@@ -75,7 +79,7 @@
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed faq_accordion_pregunta" type="button" data-mdb-toggle="collapse"
+                                <button class="accordion-button collapsed faq_accordion_pregunta" type="button" data-mdb-toggle="collapse"
                                     data-mdb-target="#basicAccordionCollapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
                                     ¿Cómo acceder correctamente a un edificio?
@@ -118,9 +122,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-12">
+                    <footer class="footer_faq">
+                        <p class="textofooterenvivo">Unidad de Infraestructura DO - UCSC. Todos los derechos reservados 2021
+                            <span class="material-icons copyenvivo">
+                                copyright
+                            </span>
+                        </p>
+                        <a href="https://portal.ucsc.cl/">
+                            <label class="linkfooterenvivo">Ir a Portal Institucional</label>
+                        </a>
+                    </footer>
+                </div>
             </div>
         </div>
-        
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
