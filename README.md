@@ -14,7 +14,7 @@ http://localhost/xampp/Proyecto/Acceso/totem_salida.php
 
 Esto debido a que no son parte de la plataforma de forma directa, ya que el ingreso
 y salida se hacen de forma presencial, tal como se indica en el Manual de Usuario
-adjunto en Documentos.
+adjunto en Documentos (Entrega Final/Documentos/Manual de usuario.pdf).
 
 
 
