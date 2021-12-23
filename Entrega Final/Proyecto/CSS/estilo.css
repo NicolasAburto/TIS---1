@@ -1,0 +1,345 @@
+.contenedor-login{
+    width: 400px;
+    height: 420px;
+    border: solid;
+    padding-top: 5%;
+    background-color: white;
+}
+
+
+h1, h2, p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reg{
+    margin: 10px 0px 10px 0px;
+}
+
+._a{
+    width: 280px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.658);
+    color: black;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.contenedor{
+    padding: 8%;
+}
+
+.acceso_info_titulo{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 230%;
+}
+
+.acceso_info{
+    text-align: center;
+}
+
+.acceso_contenedor_info{
+    background-color: rgba(255, 255, 255, 0.774);
+    border: solid;
+    width: 500px;
+    height: 500px;
+    text-align: start;
+    padding-top: 7%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 8%;
+}
+
+.fondoacceso{
+    background-image: url('accesoadm.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    min-height: 877px;
+}
+
+.acceso_margen{
+    margin-left: 15%;
+}
+
+.acceso_input{
+    width: 70%;
+}
+
+.acceso_titulo{
+    text-decoration: underline;
+    text-align: center;
+}
+
+.acceso_subtitulo{
+    font-weight: normal;
+    font-size: 150%;
+    margin-top: -3%;
+    margin-bottom: 10%;
+}
+
+.fondoportal{
+    background-image: url('edificios.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 877px;
+}
+
+.capacontainer{
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.datosanteriores_capacontainer{
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.titulo{
+    font-weight: bold;
+    font-size: 350%;
+}
+
+.subtitulo{
+    font-size: 200%;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 118px;
+}
+
+.textofooter{
+    font-size: 120%;
+    font-weight: 700;
+    margin-bottom: 1.5%;
+}
+
+.linkfooter{
+    text-decoration: underline;
+    font-size: 110%;
+    color: blue;
+}
+
+.copy{
+    position: relative;
+    top: 3px;
+}
+
+.iconousuario{
+    position: relative;
+    top: 8px;
+}
+
+.navbarlinks{
+    color: black;
+}
+
+.logotitulo{
+    position: relative;
+    left: 33%;
+    width: 30%;
+    height: 80px;
+}
+
+.contenedor_envivo{
+    padding: 1.5%;
+}
+
+.contenedor_datosenvivo{
+    background-color: rgba(255, 255, 255, 0.808);
+    border-style: solid;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+h4{
+    text-align: center;
+    font-size: 300%;
+}
+
+h3{
+    padding-top: 1%;
+    font-size: 25px;
+    padding-left: 10%;
+    font-weight: bold;
+}
+
+.containerinfoenvivo{
+    background-color: rgba(255, 255, 255, 0.521);
+    border-style: solid;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.textofooterenvivo{
+    font-size: 120%;
+    font-weight: 700;
+}
+
+.linkfooterenvivo{
+    text-decoration: underline;
+    font-size: 110%;
+    color: blue;
+}
+
+.copyenvivo{
+    position: relative;
+    top: 5px;
+}
+
+.footerenvivo{
+    text-align: center;
+    margin-top: 3.5%;
+    padding-bottom: 69px;
+}
+
+.cantidad_envivo{
+    font-size: 500%;
+}
+
+.fondodatosanteriores{
+    background-image: url('edificios.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 877px;
+    margin: 0%;
+}
+
+.contenedor_datosanteriores{
+    background-color: rgba(255, 255, 255, 0.808);
+    border-style: solid;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.datosanteriores_capacontainer{
+    background-color: rgba(255, 255, 255, 0.521);
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.boton button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 25, 25);
+}
+
+.logodatosant{
+    position: relative;
+    left: 43%;
+    width: 12%;
+}
+
+.margendatosant{
+    padding-left: 11%;
+}
+
+.fecha_datosant{
+    position: relative;
+    left: 80%;
+    margin-top: 2%;    
+    margin-bottom: 3%;
+}
+
+.margen_fecha{
+    padding-left: 30%;
+}
+
+.buscar{
+    width: 51%;
+    background-color: black;
+    color: white;
+}
+
+.edificios_datosant{
+    width: 51%;
+    border-style: solid;
+}
+
+.linkfooter_datosant{
+    text-decoration: underline;
+    font-size: 110%;
+    color: blue;
+}
+
+.footer_datosant{
+    text-align: center;
+    margin-top: 4.5%;
+    padding-bottom: 128px;
+}
+
+#dia{
+    display: none;
+    width: 51%;
+    margin-bottom: 5%;
+}
+
+#semana{
+    display: none;
+    width: 51%;
+    margin-bottom: 5%;
+}
+
+#mes{
+    display: none;
+    width: 51%;
+    margin-bottom: 5%;
+}
+
+.botongrafico{
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 25, 25);
+    margin-left: 2%;
+}
+
+#graph{
+    display: none;
+}
+
+.textocircle{
+    font-weight: 600;
+}
+
+.faq_capacontainer{
+    background-color: rgba(255, 255, 255, 0.521);
+    height: 877px;
+}
+
+.faq_titulo{
+    font-weight: 700;
+}
+
+.faq_accordion_pregunta{
+    font-weight: 700;
+    font-size: 70%;
+}
+
+.pdf{
+    color: white;
+    text-decoration: none;
+}
+
+.footer_faq{
+    text-align: center;
+    margin-top: 27%;
+    padding-bottom: 69px;
+}
+
+.acceso_run_info{
+    font-weight: normal;
+    font-size: 85%;
+}
